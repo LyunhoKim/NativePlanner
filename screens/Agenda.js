@@ -10,7 +10,7 @@ class AgendaScreen extends Component {
     super(props);
     this.renderItem = this.renderItem.bind(this);
 
-    // 넘겨준 props에서 navigation 추출하여 멤버 변수로 할당
+    // 넘겨준 props에서 navigation 추출하여 멤버 변수로 할당 //
     this.navigation = props.navigation;
     this.state = {
       items: {},
@@ -76,7 +76,7 @@ class AgendaScreen extends Component {
       <TouchableOpacity
         testID={testIDs.agenda.ITEM}
         style={[styles.item, {height: item.height}]}
-        // navigate 해주면 됨. 두번째 파라미터로 데이터 전달
+        // navigate 해주면 됨. 두번째 파라미터로 데이터 전달 //
         onPress={() => this.navigation.navigate('Today', item)}>
         <Text>{item.name}</Text>
       </TouchableOpacity>
@@ -101,7 +101,7 @@ class AgendaScreen extends Component {
   }
 }
 
-// https://reactnavigation.org/docs/use-navigation/#using-with-class-component
+// https://reactnavigation.org/docs/use-navigation/#using-with-class-component //
 // 함수를 이용해서 useNavigation(임의의 component에서 navigation에 접근할 수 있음, 단 class component에서는 불가) 현재 화면 클래스를 wrapping
 export default function (props) {
   const navigation = useNavigation();
